@@ -30,6 +30,11 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 		return (T) getSession().get(persistentClass, key);
 	}
 
+//	public T findOne(final long id) {
+//		return entityManager.find(clazz, id);
+//	}
+
+
 	public void persist(T entity) {
 		getSession().persist(entity);
 	}
